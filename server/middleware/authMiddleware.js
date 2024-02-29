@@ -4,6 +4,7 @@ import User from "../models/userModel.js";
 export default async function Auth(req, res, next) {
   try {
     const token = req.header("Authorization");
+    console.log(token)
 
     if (!token) {
       return res.status(403).json({ message: "Access denied" });
